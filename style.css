@@ -313,9 +313,19 @@ a.email:hover,
 .eng-figure--portrait { max-width: 460px; }
 .eng-gallery {
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: start;
+}
+.eng-cap {
+  margin-top: 0.85rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 60ch;
 }
 
 /* Skills ---------------------------------------------------- */

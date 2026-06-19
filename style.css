@@ -394,15 +394,26 @@ a.email:hover,
    ============================================================ */
 .footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
+  flex-direction: column;
+  gap: 1.1rem;
   padding-block: 2.5rem 3.25rem;
   margin-top: 1rem;
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+.footer__version {
+  align-self: flex-end;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: rgba(42, 38, 34, 0.38);
 }
 .footer__name {
   font-family: var(--display);

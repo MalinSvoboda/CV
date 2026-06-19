@@ -313,8 +313,8 @@ a.email:hover,
 .eng-figure--portrait { max-width: 460px; }
 .eng-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 1.25rem;
   align-items: start;
 }
 .eng-cap {

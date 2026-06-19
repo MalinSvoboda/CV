@@ -46,3 +46,28 @@
     init();
   }
 })();
+
+/* Email obfuscation — the address is assembled at runtime from fragments,
+   so no harvestable "user@domain" string exists in the HTML or this file.
+   No-JS visitors see the readable "(at)/(dot)" fallback in the markup. */
+(function () {
+  "use strict";
+
+  function reveal() {
+    var user = "malin" + "." + "svoboda";
+    var domain = "gmail" + "." + "com";
+    var addr = user + "@" + domain;
+    var links = document.querySelectorAll("a.js-email");
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute("href", "mailto:" + addr);
+      links[i].setAttribute("aria-label", "E-Mail an " + addr);
+      links[i].textContent = addr;
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", reveal);
+  } else {
+    reveal();
+  }
+})();

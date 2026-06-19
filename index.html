@@ -1,59 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malin Svoboda — CV</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --accent: #38bdf8;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-    }
-    .card {
-      text-align: center;
-      max-width: 32rem;
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-    }
-    h1 span { color: var(--accent); }
-    p {
-      color: var(--muted);
-      font-size: 1.125rem;
-      line-height: 1.6;
-    }
-    .tag {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.4rem 0.9rem;
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      color: var(--accent);
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-  </style>
+  <title>Malin Dorothea Svoboda — Lebenslauf · CV</title>
+  <meta name="description" content="Lebenslauf von Malin Dorothea Svoboda — Schülerin aus Berlin mit Interesse an Marketing. CV of Malin Dorothea Svoboda." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <h1>Welcome to <span>Malin Svoboda's</span> CV</h1>
-    <p>This site is just getting started — a proper CV is on its way.</p>
-    <span class="tag">Coming soon</span>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="topbar">
+      <span class="monogram">M<span class="monogram__dot">·</span>S</span>
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+    </div>
+
+    <div class="hero">
+      <div class="hero__text">
+        <p class="eyebrow" data-de="Lebenslauf" data-en="Curriculum Vitæ">Lebenslauf</p>
+        <h1 class="name">Malin Dorothea<span class="name__last">Svoboda</span></h1>
+        <p class="tagline"
+           data-de="Schülerin · kreativ, sprachbegabt, marketinginteressiert"
+           data-en="Student · creative, multilingual, drawn to marketing">Schülerin · kreativ, sprachbegabt, marketinginteressiert</p>
+        <div class="hero__contact">
+          <a class="email" href="mailto:malin.svoboda@gmail.com">malin.svoboda@gmail.com</a>
+          <span class="dot" aria-hidden="true">·</span>
+          <span class="place">Berlin</span>
+        </div>
+      </div>
+
+      <figure class="hero__photo">
+        <img src="assets/malin.jpg" alt="Malin Dorothea Svoboda" width="360" height="478" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" id="profile">
+      <p class="section-num" aria-hidden="true">01</p>
+      <h2 class="section-title" data-de="Profil" data-en="Profile">Profil</h2>
+      <p class="lead"
+         data-de="Aufgeschlossene Schülerin mit einem Gespür für Sprache, Gestaltung und Kommunikation. Durch ein Auslandsjahr in Neuseeland international geprägt und mit Freude am kreativen Arbeiten – von der Malerei bis zum geschriebenen Wort. Auf der Suche nach einem Einstieg im Marketing."
+         data-en="An open-minded student with a feel for language, design, and communication. Shaped by an exchange year in New Zealand and driven by creative work — from painting to the written word. Looking for a first step into marketing.">Aufgeschlossene Schülerin mit einem Gespür für Sprache, Gestaltung und Kommunikation. Durch ein Auslandsjahr in Neuseeland international geprägt und mit Freude am kreativen Arbeiten – von der Malerei bis zum geschriebenen Wort. Auf der Suche nach einem Einstieg im Marketing.</p>
+    </section>
+
+    <section class="block" id="education">
+      <p class="section-num" aria-hidden="true">02</p>
+      <h2 class="section-title" data-de="Werdegang" data-en="Education">Werdegang</h2>
+      <ol class="timeline">
+        <li class="tl-item">
+          <span class="tl-period" data-de="Sept. 2013 – Juli 2018" data-en="Sept. 2013 – July 2018">Sept. 2013 – Juli 2018</span>
+          <div class="tl-body">
+            <h3 class="tl-place">Grundschule am Ritterfeld</h3>
+            <p class="tl-desc" data-de="Abschlussnote 6. Klasse: 2,9" data-en="Final grade (Year 6): 2.9">Abschlussnote 6. Klasse: 2,9</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <span class="tl-period" data-de="seit Sept. 2018" data-en="since Sept. 2018">seit Sept. 2018</span>
+          <div class="tl-body">
+            <h3 class="tl-place">Hans-Carossa-Gymnasium</h3>
+            <p class="tl-desc"
+               data-de="Derzeit 12. Klasse · Durchschnitt 11. Klasse: 2,1 · Leistungskurse Englisch &amp; Geschichte · Cambridge Certificate Course"
+               data-en="Currently Year 12 · Year 11 average: 2.1 · Advanced courses English &amp; History · Cambridge Certificate course">Derzeit 12. Klasse · Durchschnitt 11. Klasse: 2,1 · Leistungskurse Englisch &amp; Geschichte · Cambridge Certificate Course</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <span class="tl-period" data-de="Juli 2024 – Juli 2025" data-en="July 2024 – July 2025">Juli 2024 – Juli 2025</span>
+          <div class="tl-body">
+            <h3 class="tl-place">Marlborough Girls' College</h3>
+            <p class="tl-desc" data-de="Auslandsjahr · Neuseeland" data-en="Exchange year · New Zealand">Auslandsjahr · Neuseeland</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block" id="skills">
+      <p class="section-num" aria-hidden="true">03</p>
+      <h2 class="section-title" data-de="Kenntnisse" data-en="Skills">Kenntnisse</h2>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3 class="skill-head" data-de="Sprachen" data-en="Languages">Sprachen</h3>
+          <ul class="skill-list">
+            <li>
+              <span class="skill-key" data-de="Deutsch" data-en="German">Deutsch</span>
+              <span class="skill-val" data-de="Muttersprache" data-en="native">Muttersprache</span>
+            </li>
+            <li>
+              <span class="skill-key" data-de="Englisch" data-en="English">Englisch</span>
+              <span class="skill-val" data-de="sehr gut" data-en="very good">sehr gut</span>
+            </li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-head" data-de="IT" data-en="IT">IT</h3>
+          <ul class="skill-list">
+            <li><span class="skill-key">MS Office</span><span class="skill-val">Word, PowerPoint</span></li>
+            <li><span class="skill-key">MS Teams</span><span class="skill-val" data-de="Zusammenarbeit" data-en="collaboration">Zusammenarbeit</span></li>
+            <li><span class="skill-key">Scratch</span><span class="skill-val" data-de="Förderkurs für Hochbegabte" data-en="gifted-students program">Förderkurs für Hochbegabte</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="interests">
+      <p class="section-num" aria-hidden="true">04</p>
+      <h2 class="section-title" data-de="Interessen" data-en="Interests">Interessen</h2>
+      <ul class="interests">
+        <li data-de="Malen &amp; Zeichnen" data-en="Painting &amp; drawing">Malen &amp; Zeichnen</li>
+        <li data-de="Literatur" data-en="Literature">Literatur</li>
+        <li data-de="Backen" data-en="Baking">Backen</li>
+      </ul>
+    </section>
   </main>
+
+  <footer class="footer">
+    <span class="footer__name">Malin Dorothea Svoboda</span>
+    <div class="footer__contact">
+      <a href="mailto:malin.svoboda@gmail.com">malin.svoboda@gmail.com</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>Berlin</span>
+    </div>
+  </footer>
+
+  <script defer src="script.js"></script>
 </body>
 </html>

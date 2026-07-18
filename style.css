@@ -473,3 +473,56 @@ a.email:hover,
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   Print — one A4 page, portrait photo only
+   ============================================================ */
+@page { size: A4; margin: 10mm 12mm; }
+
+@media print {
+  * { animation: none !important; transition: none !important; }
+
+  html { font-size: 8.75px; }
+  body {
+    background-color: var(--paper);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .grain,
+  .lang-toggle,
+  .eng-figure,
+  .eng-gallery,
+  .footer { display: none; }
+
+  .masthead, main { width: 100%; }
+
+  .topbar { padding-block: 0; }
+  .hero { padding-block: 1rem 0.9rem; }
+  .hero__photo img { width: 118px; box-shadow: none; }
+  .hero__photo::after { transform: translate(8px, 8px); }
+  .name { font-size: 3.6rem; }
+  .eyebrow { margin-bottom: 0.6rem; }
+  .tagline { margin-top: 0.7rem; font-size: 1.15rem; }
+  .hero__contact { margin-top: 0.8rem; font-size: 1rem; }
+
+  .block { padding-block: 0.85rem; }
+  .section-title { font-size: 1.8rem; margin-bottom: 0.7rem; }
+  .section-num { margin-bottom: 0.3rem; font-size: 0.8rem; }
+
+  .lead { font-size: 1.3rem; max-width: none; }
+
+  .tl-item { padding-block: 0.45rem; }
+  .tl-place { font-size: 1.4rem; }
+  .tl-desc { max-width: none; }
+
+  .eng-intro { margin-bottom: 0.7rem; max-width: none; }
+  .eng-item { margin-top: 0.6rem; padding-top: 0.6rem; }
+  .eng-desc { margin-bottom: 0; max-width: none; }
+  .eng-title { font-size: 1.4rem; }
+
+  .skill-list li { padding-block: 0.35rem; }
+  .skill-key { font-size: 1.2rem; }
+
+  .interests li { font-size: 1.4rem; }
+}
